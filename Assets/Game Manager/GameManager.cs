@@ -10,6 +10,9 @@ namespace Game_Manager
         
         public static event Action OnStart;
         public static event Action OnRestart;
+        public static event Action OnFault;
+        
+        private int _currentLevelNumber;
         
         private void Awake()
         {
@@ -27,7 +30,7 @@ namespace Game_Manager
         {
             SetResolutionAndFrameRate();
         }
-        
+
         public void StartGame()
         {
             OnStart?.Invoke();
@@ -37,6 +40,11 @@ namespace Game_Manager
         public void RestartGame()
         {
             OnRestart?.Invoke();
+        }
+
+        public void OnPlayerFault()
+        {
+            OnFault?.Invoke();
         }
         
         private void SetResolutionAndFrameRate()

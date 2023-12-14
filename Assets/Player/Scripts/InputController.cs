@@ -1,3 +1,5 @@
+using System;
+using Spline;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -10,16 +12,21 @@ namespace Player.Scripts
         private Vector2 _touchStartPos;
         private float _lastSwipeValue;
 
+        private void Update()
+        {
+            if (Input.touchCount <= 0) return;
+            
+            playerSplineController.SetPlayerOffsetX(GetInputXValue());
+        }
+
         public float GetInputXValue()
         {
-            if (Input.touchCount <= 0) return _lastSwipeValue;
+            var touch = Input.GetTouch(0);
+            var fingerPositionX = (touch.position.x - Screen.width / 2f) / (Screen.width / 2f);
             
-            Touch touch = Input.GetTouch(0);
-            float fingerPositionX = (touch.position.x - Screen.width / 2f) / (Screen.width / 2f);
-            
-            float normalizedFingerPositionX = Mathf.Clamp(fingerPositionX, -1f, 1f);
+            var normalizedFingerPositionX = Mathf.Clamp(fingerPositionX, -1f, 1f);
             _lastSwipeValue = normalizedFingerPositionX;
-            //Debug.Log("Normalized Finger Position X: " + normalizedFingerPositionX);
+            
             return _lastSwipeValue;
         }
     }

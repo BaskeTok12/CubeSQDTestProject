@@ -1,39 +1,45 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Dreamteck.Splines;
+using Game_Manager;
 using Player.Scripts;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class SplineFollowerController  : MonoBehaviour
+namespace Spline
 {
-   [SerializeField] private SplineFollower playerSplineFollower;
-   [SerializeField] private InputController inputController;
-   [field: SerializeField] public float MaxOffset { get; private set; }
-
-   private void Update()
+   public class SplineFollowerController : MonoBehaviour
    {
-      SetPlayerOffsetX(inputController.GetInputXValue());
-   }
+      [SerializeField] private SplineFollower splineFollower;
+      [field: SerializeField] public float MaxOffset { get; private set; }
+      [SerializeField] private float swipeSpeed;
+      
+      private void OnEnable()
+      {
+         GameManager.OnStart += StartFollowing;
+      }
 
-   public void StartFollowing()
-   {
-      playerSplineFollower.follow = true;
-   }
+      private void OnDisable()
+      {
+         GameManager.OnStart -= StartFollowing;
+      }
+
+      public void StartFollowing()
+      {
+         splineFollower.follow = true;
+      }
    
-   public void StopFollowing()
-   {
-      playerSplineFollower.follow = false;
-   }
+      public void StopFollowing()
+      {
+         splineFollower.follow = false;
+      }
 
-   public void SetPlayerOffsetX(float velocity)
-   {
-      var offsetX = Mathf.Clamp(playerSplineFollower.motion.offset.x * velocity * Time.deltaTime, -MaxOffset,
-         MaxOffset);
-      Debug.Log("Offset:"+ offsetX);
-      playerSplineFollower.motion.offset =
-         new Vector2(offsetX, playerSplineFollower.motion.offset.y);
+      public void SetPlayerOffsetX(float velocity)
+      {
+         var offsetX = Mathf.Clamp(splineFollower.motion.offset.x + velocity * swipeSpeed, -MaxOffset,
+            MaxOffset);
+         
+         splineFollower.motion.offset =
+            new Vector2(offsetX, splineFollower.motion.offset.y);
+      }
    }
 }
 
