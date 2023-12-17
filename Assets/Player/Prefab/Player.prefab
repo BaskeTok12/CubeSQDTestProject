@@ -175,7 +175,7 @@ MonoBehaviour:
   playerCollisionController: {fileID: 5311315501824608106}
   runSpeed: 5
   speedChangingDuration: 0.5
-  toPlayerStopDuration: 5
+  toPlayerStopDuration: 1.08
   finalDeathScale: 1.3
   finalDeathDuration: 0.2
 --- !u!114 &5842820059893101185

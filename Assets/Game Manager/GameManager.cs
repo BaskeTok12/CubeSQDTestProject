@@ -2,20 +2,19 @@
 using System.Linq;
 using Levels_Manager;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Game_Manager
 {
     public class GameManager : MonoBehaviour
     {
         public static GameManager GameManagerInstance { get; private set; }
-        
         public static event Action OnStart;
         public static event Action OnRestart;
         public static event Action OnFault;
 
         public static event Action OnFinish;
-
+        
+        [Header("Level Management")]
         [SerializeField] private LevelManager levelManager;
         
         private int _currentLevelNumber;
@@ -29,18 +28,16 @@ namespace Game_Manager
             }
             
             GameManagerInstance = this;
-            //DontDestroyOnLoad(this);
         }
 
         private void Start()
         {
             SetResolutionAndFrameRate();
         }
-
+        
         public void StartGame()
         {
             OnStart?.Invoke();
-            Debug.Log("Game Started!");
         }
 
         public void RestartGame()
@@ -66,7 +63,7 @@ namespace Game_Manager
         
         private void SetResolutionAndFrameRate()
         {
-            Resolution[] resolutions = Screen.resolutions;
+            var resolutions = Screen.resolutions;
             Application.targetFrameRate = (int)resolutions.Last().refreshRateRatio.value;
             QualitySettings.vSyncCount = 0;
         }

@@ -1,3 +1,4 @@
+using Game_Manager;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -11,22 +12,22 @@ namespace SFX.Sound_Manager
         [SerializeField] private AudioSource musicSource;
         [SerializeField] private AudioSource effectsSource;
         [Header("Sounds")] 
-    
-        private const string MasterVolume = "MasterVolume";
+        [SerializeField] private AudioClip playerDeathSound;
+
 
         private void OnEnable()
         {
-            
+            GameManager.OnFault += PlayPlayerDeathSound;
         }
 
         private void OnDisable()
         {
-          
+            GameManager.OnFault -= PlayPlayerDeathSound;
         }
     
-        private void PlaySound()
+        private void PlayPlayerDeathSound()
         {
-            //effectsSource.PlayOneShot();
+            effectsSource.PlayOneShot(playerDeathSound);
         }
     }
 }

@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using Game_Manager;
+using Levels_Manager;
+using TMPro;
 using UnityEngine;
 
 namespace UI.Scripts
 {
     public class UIManager : MonoBehaviour
     {
-        public static UIManager UIManagerInstance { get; private set; }
-
         private GameManager _gameManager;
         
         [Header("Panels")] 
@@ -19,29 +18,23 @@ namespace UI.Scripts
         [SerializeField] private FadingManager fadingManager;
         [SerializeField] private float tweenDuration;
         [SerializeField] private float restartLatency;
+        [Header("DevLogs")] 
+        [SerializeField] private TextMeshProUGUI currentLevelNumberText;
         
-        private void Awake()
-        {
-            if (UIManagerInstance != null)
-            {
-                Destroy(gameObject);
-                return;
-            }
-            
-            UIManagerInstance = this;
-            //DontDestroyOnLoad(this);
-        }
-
         private void OnEnable()
         {
             GameManager.OnFault += ShowFaultPanel;
             GameManager.OnFinish += ShowFinalPanel;
+
+            LevelManager.OnLevelChanged += UpdateCurrentNumberText;
         }
 
         private void OnDisable()
         {
             GameManager.OnFault -= ShowFaultPanel;
             GameManager.OnFinish -= ShowFinalPanel;
+            
+            LevelManager.OnLevelChanged -= UpdateCurrentNumberText;
         }
 
         private void Start()
@@ -67,19 +60,11 @@ namespace UI.Scripts
         private void ShowFaultPanel()
         {
             fadingManager.ShowPanel(faultPanel, tweenDuration);
-            //StartCoroutine(FadeInToFaultPanel());
         }
         
         private void ShowFinalPanel()
         {
             fadingManager.ShowPanel(finalGamePanel, tweenDuration);
-            //StartCoroutine(FadeInToFaultPanel());
-        }
-        
-        private void HideFinalPanel()
-        {
-            fadingManager.HidePanel(finalGamePanel, tweenDuration);
-            //StartCoroutine(FadeInToFaultPanel());
         }
         
         private IEnumerator FadeOutToPlaymode()
@@ -109,17 +94,10 @@ namespace UI.Scripts
             
             fadingManager.ShowPanel(startGamePanel, tweenDuration);
         }
-        
-        /*private IEnumerator FadeInToFaultPanel()
+
+        private void UpdateCurrentNumberText(int levelNumber)
         {
-            fadingManager.ShowPanel(faultPanel, tweenDuration);
-            yield return null;
-        }*/
-        
-        /*private IEnumerator FadeInToFinalPanel()
-        {
-            fadingManager.ShowPanel(finalGamePanel, tweenDuration);
-            yield return null;
-        }*/
+            currentLevelNumberText.text = levelNumber.ToString();
+        }
     }
 }

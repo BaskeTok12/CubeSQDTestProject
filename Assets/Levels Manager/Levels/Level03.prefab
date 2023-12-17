@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 595837597900649413}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.19546372, y: 0.0000038750613, z: -0.0000007723315, w: 0.980711}
+  m_LocalRotation: {x: 0.19546372, y: 0.000003886811, z: -0.0000007746732, w: 0.980711}
   m_LocalPosition: {x: 0, y: 3, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6914,7 +6914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _result.position.x
-      value: 39.35015
+      value: 39.350155
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _result.position.y
@@ -6962,7 +6962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _finalResult.position.x
-      value: 39.35015
+      value: 39.350155
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _finalResult.position.y
@@ -6974,7 +6974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipToSample.position.x
-      value: 34.68004
+      value: 34.680042
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipToSample.position.y
@@ -6998,7 +6998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipFromSample.position.x
-      value: 39.35015
+      value: 39.350155
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipFromSample.position.y
@@ -7010,7 +7010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5805412184387232094, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.2999961
+      value: -2.2999997
       objectReference: {fileID: 0}
     - target: {fileID: 5805412184387232094, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7018,7 +7018,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5805412184387232094, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0000019073486
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5805412184387232094, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: m_LocalRotation.w
@@ -27202,7 +27202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _result.up.x
-      value: -0.3201066
+      value: -0.32010657
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _result.up.y
@@ -27210,11 +27210,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _result.up.z
-      value: -0.047084004
+      value: -0.04708399
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _finalResult.up.x
-      value: -0.3201066
+      value: -0.32010657
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _finalResult.up.y
@@ -27222,7 +27222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _finalResult.up.z
-      value: -0.047084004
+      value: -0.04708399
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _result.forward.x
@@ -27230,7 +27230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _result.forward.y
-      value: 0.24290064
+      value: 0.24290062
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _result.forward.z
@@ -27238,7 +27238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipToSample.up.x
-      value: -0.3201066
+      value: -0.32010657
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipToSample.up.y
@@ -27246,7 +27246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipToSample.up.z
-      value: -0.047084004
+      value: -0.04708399
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _result.position.x
@@ -27262,7 +27262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipFromSample.up.x
-      value: -0.3201066
+      value: -0.32010657
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipFromSample.up.y
@@ -27270,7 +27270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipFromSample.up.z
-      value: -0.047084004
+      value: -0.04708399
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _finalResult.forward.x
@@ -27278,7 +27278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _finalResult.forward.y
-      value: 0.24290064
+      value: 0.24290062
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _finalResult.forward.z
@@ -27326,7 +27326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipFromSample.forward.y
-      value: 0.24290064
+      value: 0.24290062
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipFromSample.forward.z
@@ -27362,7 +27362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5805412184387232094, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.000000004656613
+      value: 0.00000002514571
       objectReference: {fileID: 0}
     - target: {fileID: 5805412184387232094, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: m_LocalRotation.y
@@ -27370,7 +27370,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5805412184387232094, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000018626451
+      value: -0.0000000018626451
       objectReference: {fileID: 0}
     - target: {fileID: 5805412184387232094, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -29468,7 +29468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _result.position.z
-      value: 11.610001
+      value: 11.61
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _finalResult.forward.x
@@ -29492,7 +29492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _finalResult.position.z
-      value: 11.610001
+      value: 11.61
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipToSample.position.x
@@ -29500,7 +29500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipToSample.position.z
-      value: 10.81
+      value: 10.809999
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipFromSample.forward.x
@@ -29516,7 +29516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipFromSample.position.z
-      value: 11.610001
+      value: 11.61
       objectReference: {fileID: 0}
     - target: {fileID: 5805412184387232094, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: m_LocalPosition.x
@@ -39640,7 +39640,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _result.position.z
-      value: 18.690002
+      value: 18.69
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipFromSample.up.x
@@ -39688,7 +39688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _finalResult.position.z
-      value: 18.690002
+      value: 18.69
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipToSample.position.x
@@ -39724,7 +39724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipFromSample.position.z
-      value: 18.690002
+      value: 18.69
       objectReference: {fileID: 0}
     - target: {fileID: 5805412184387232094, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: m_LocalPosition.x
@@ -41896,7 +41896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _result.position.x
-      value: 34.362846
+      value: 34.36285
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _result.position.y
@@ -41924,7 +41924,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _finalResult.position.x
-      value: 34.362846
+      value: 34.36285
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _finalResult.position.y
@@ -41936,7 +41936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipToSample.position.x
-      value: 39.03296
+      value: 39.032963
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipToSample.position.y
@@ -41956,7 +41956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipFromSample.position.x
-      value: 34.362846
+      value: 34.36285
       objectReference: {fileID: 0}
     - target: {fileID: 4912705557098229142, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: _clipFromSample.position.y
@@ -41968,7 +41968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5805412184387232094, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.300002
+      value: -2.2999992
       objectReference: {fileID: 0}
     - target: {fileID: 5805412184387232094, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: m_LocalPosition.y
@@ -41976,7 +41976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5805412184387232094, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0000038146973
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5805412184387232094, guid: 5bf947e54acde5c4fbb8b3fd6135ba42, type: 3}
       propertyPath: m_LocalRotation.w

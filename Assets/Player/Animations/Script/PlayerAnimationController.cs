@@ -1,5 +1,4 @@
-﻿using Game_Manager;
-using Player.Scripts;
+﻿using Player.Scripts;
 using UnityEngine;
 
 namespace Player.Animations.Script

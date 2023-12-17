@@ -1,13 +1,19 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Levels_Manager
 {
     public class LevelManager : MonoBehaviour
     {
+        public static Action<int> OnLevelChanged;
+        
+        [Header("Level Prefabs")]
         [SerializeField] private GameObject[] levels;
+        [Header("Levels Parent Transform")]
         [SerializeField] private Transform levelsParent;
-        private GameObject _currentLevelInstance;
         public int CurrentLevelNumber { get; private set; }
+        
+        private GameObject _currentLevelInstance;
 
         private void Awake()
         {
@@ -25,7 +31,6 @@ namespace Levels_Manager
         {
             Destroy(_currentLevelInstance);
 
-            // Проверка на выход за границы массива levels
             CurrentLevelNumber = (CurrentLevelNumber + 1) % levels.Length;
 
             InstantiateCurrentLevel();
@@ -35,6 +40,7 @@ namespace Levels_Manager
         {
             _currentLevelInstance = Instantiate(levels[CurrentLevelNumber], levelsParent.position, Quaternion.identity, levelsParent);
             _currentLevelInstance.SetActive(true);
+            OnLevelChanged?.Invoke(CurrentLevelNumber + 1);
         }
     }
 

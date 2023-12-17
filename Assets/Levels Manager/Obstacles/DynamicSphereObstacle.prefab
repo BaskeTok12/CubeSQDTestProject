@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4912705557098229142}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490279416190760507}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -2.3, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 1.4296643, y: 0, z: 0}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -162,7 +162,7 @@ MonoBehaviour:
   applyDirectionRotation: 1
   useTriggers: 0
   triggerGroup: 0
-  _direction: 1
+  _direction: -1
   _dontLerpDirection: 0
   _physicsMode: 0
   _motion:
@@ -178,7 +178,7 @@ MonoBehaviour:
     applyPositionZ: 1
     applyPosition2D: 1
     retainLocalPosition: 0
-    direction: 1
+    direction: -1
     applyRotationX: 1
     applyRotationY: 1
     applyRotationZ: 1
@@ -192,26 +192,26 @@ MonoBehaviour:
   targetRigidbody2D: {fileID: 0}
   targetTransform: {fileID: 5805412184387232094}
   _result:
-    position: {x: -2.3, y: 0.76, z: 0}
+    position: {x: 1.4296643, y: 0.76, z: 0}
     up: {x: 0, y: 1, z: 0}
     forward: {x: 1, y: 0, z: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
-    percent: 0
+    percent: 0.8107965157198528
   _finalResult:
-    position: {x: -2.3, y: 0.76, z: 0}
+    position: {x: 1.4296643, y: 0.76, z: 0}
     up: {x: 0, y: 1, z: 0}
     forward: {x: 1, y: 0, z: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
-    percent: 0
+    percent: 0.8107965157198528
   wrapMode: 2
   followMode: 0
   autoStartPosition: 0
   _follow: 1
   _startPosition: 0
   preserveUniformSpeedWithOffset: 0
-  _followSpeed: 2
+  _followSpeed: -2
   _followDuration: 1
   _speedModifier:
     blend: 1
