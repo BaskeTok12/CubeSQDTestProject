@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3182710163357593466}
   - component: {fileID: 5233722033943195653}
   - component: {fileID: 5842820059893101185}
-  - component: {fileID: 4195448791269117424}
+  - component: {fileID: 6421174560315715290}
   - component: {fileID: 285201532683204557}
   - component: {fileID: 2297955707170913035}
   - component: {fileID: 5311315501824608106}
@@ -80,9 +80,9 @@ MonoBehaviour:
     size: 1
     percent: 0
   _clipToSample:
-    position: {x: 4.0757465, y: 0, z: 84.343895}
+    position: {x: -4.236731, y: 20.996727, z: 37.465412}
     up: {x: 0, y: 1, z: 0}
-    forward: {x: -0.26108, y: 0.05618686, z: 0.96368057}
+    forward: {x: 0.0026045353, y: 0.26753002, z: 0.963546}
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
     percent: 1
@@ -128,10 +128,10 @@ MonoBehaviour:
   targetTransform: {fileID: 7821375812215509401}
   _result:
     position: {x: 0, y: 0, z: 0}
-    up: {x: 0, y: 1, z: 0}
-    forward: {x: 0, y: 0, z: 1}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    size: 1
+    up: {x: 0, y: 0, z: 0}
+    forward: {x: 0, y: 0, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    size: 0
     percent: 0
   _finalResult:
     position: {x: 0, y: 0, z: 0}
@@ -170,6 +170,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122f6d6798f59a341b066f74b3021802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTransform: {fileID: 7821375812215509401}
+  playerSplineFollower: {fileID: 6421174560315715290}
+  playerCollisionController: {fileID: 5311315501824608106}
+  runSpeed: 5
+  speedChangingDuration: 0.5
+  toPlayerStopDuration: 5
+  finalDeathScale: 1.3
+  finalDeathDuration: 0.2
 --- !u!114 &5842820059893101185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,8 +190,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a4d6ace642bbf9468106b9ae9a643a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSplineController: {fileID: 4195448791269117424}
---- !u!114 &4195448791269117424
+  playerSplineController: {fileID: 6421174560315715290}
+--- !u!114 &6421174560315715290
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,12 +200,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7114132748131897030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3aada0fe7487b84a9d74b29e88fc7c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 75f93c635e4c40a5b474d4627afed1e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   splineFollower: {fileID: 3182710163357593466}
   <MaxOffset>k__BackingField: 3
-  swipeSpeed: 0.15
+  swipeSpeed: 0.12
 --- !u!95 &285201532683204557
 Animator:
   serializedVersion: 5
@@ -358,7 +366,8 @@ PrefabInstance:
       propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: 854f7989e46b0f04289e42409a30daac, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
+using Levels_Manager;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Game_Manager
 {
@@ -11,6 +13,10 @@ namespace Game_Manager
         public static event Action OnStart;
         public static event Action OnRestart;
         public static event Action OnFault;
+
+        public static event Action OnFinish;
+
+        [SerializeField] private LevelManager levelManager;
         
         private int _currentLevelNumber;
         
@@ -23,7 +29,7 @@ namespace Game_Manager
             }
             
             GameManagerInstance = this;
-            DontDestroyOnLoad(this);
+            //DontDestroyOnLoad(this);
         }
 
         private void Start()
@@ -39,12 +45,23 @@ namespace Game_Manager
 
         public void RestartGame()
         {
+            levelManager.RestartLevel();
             OnRestart?.Invoke();
+        }
+
+        public void NextLevel()
+        {
+            levelManager.ChangeToNextLevel();
         }
 
         public void OnPlayerFault()
         {
             OnFault?.Invoke();
+        }
+        
+        public void OnPlayerFinished()
+        {
+            OnFinish?.Invoke();
         }
         
         private void SetResolutionAndFrameRate()

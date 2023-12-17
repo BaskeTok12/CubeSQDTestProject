@@ -13,6 +13,7 @@ namespace UI.Scripts
         
         [Header("Panels")] 
         [SerializeField] private GameObject startGamePanel;
+        [SerializeField] private GameObject faultPanel;
         [SerializeField] private GameObject finalGamePanel;
         [Header("TweenParameters")]
         [SerializeField] private FadingManager fadingManager;
@@ -28,7 +29,19 @@ namespace UI.Scripts
             }
             
             UIManagerInstance = this;
-            DontDestroyOnLoad(this);
+            //DontDestroyOnLoad(this);
+        }
+
+        private void OnEnable()
+        {
+            GameManager.OnFault += ShowFaultPanel;
+            GameManager.OnFinish += ShowFinalPanel;
+        }
+
+        private void OnDisable()
+        {
+            GameManager.OnFault -= ShowFaultPanel;
+            GameManager.OnFinish -= ShowFinalPanel;
         }
 
         private void Start()
@@ -38,10 +51,38 @@ namespace UI.Scripts
 
         public void StartGame()
         {
-            StartCoroutine(FadeToPlaymode());
+            StartCoroutine(FadeOutToPlaymode());
         }
         
-        private IEnumerator FadeToPlaymode()
+        public void RestartGame()
+        {
+            StartCoroutine(FadeOutFromRestartToPlaymode());
+        }
+
+        public void NextLevel()
+        {
+            StartCoroutine(FadeFromFinalPanelToStart());
+        }
+
+        private void ShowFaultPanel()
+        {
+            fadingManager.ShowPanel(faultPanel, tweenDuration);
+            //StartCoroutine(FadeInToFaultPanel());
+        }
+        
+        private void ShowFinalPanel()
+        {
+            fadingManager.ShowPanel(finalGamePanel, tweenDuration);
+            //StartCoroutine(FadeInToFaultPanel());
+        }
+        
+        private void HideFinalPanel()
+        {
+            fadingManager.HidePanel(finalGamePanel, tweenDuration);
+            //StartCoroutine(FadeInToFaultPanel());
+        }
+        
+        private IEnumerator FadeOutToPlaymode()
         {
             fadingManager.HidePanel(startGamePanel, tweenDuration);
             _gameManager.StartGame();
@@ -49,13 +90,36 @@ namespace UI.Scripts
             yield return null;
         }
         
-        private IEnumerator FadeToRestart()
+        private IEnumerator FadeOutFromRestartToPlaymode()
+        {
+            fadingManager.HidePanel(faultPanel, restartLatency);
+
+            yield return new WaitForSeconds(restartLatency);
+            _gameManager.RestartGame();
+
+            fadingManager.ShowPanel(startGamePanel, tweenDuration);
+        }
+        
+        private IEnumerator FadeFromFinalPanelToStart()
         {
             fadingManager.HidePanel(finalGamePanel, restartLatency);
 
             yield return new WaitForSeconds(restartLatency);
+            _gameManager.NextLevel();
             
-            _gameManager.RestartGame();
+            fadingManager.ShowPanel(startGamePanel, tweenDuration);
         }
+        
+        /*private IEnumerator FadeInToFaultPanel()
+        {
+            fadingManager.ShowPanel(faultPanel, tweenDuration);
+            yield return null;
+        }*/
+        
+        /*private IEnumerator FadeInToFinalPanel()
+        {
+            fadingManager.ShowPanel(finalGamePanel, tweenDuration);
+            yield return null;
+        }*/
     }
 }

@@ -20,10 +20,14 @@ namespace Player.Scripts
         
         private void OnCollisionEnter(Collision collision)
         {
-            Debug.Log("OnCollisionEnter");
             if (collision.gameObject.CompareTag(Tags.ObstacleTrigger))
             {
                 TouchObstacle(collision.transform.position);
+            }
+
+            if (collision.gameObject.CompareTag(Tags.FinishTrigger))
+            {
+                _gameManager.OnPlayerFinished();
             }
         }
         private void TouchObstacle(Vector3 collisionPosition)

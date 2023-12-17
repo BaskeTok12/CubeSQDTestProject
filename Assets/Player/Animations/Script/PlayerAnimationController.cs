@@ -11,6 +11,7 @@ namespace Player.Animations.Script
         
         private static readonly int IsRunning = Animator.StringToHash("IsRunning");
         private static readonly int IsDancing = Animator.StringToHash("IsDancing");
+        private static readonly int IsIdle = Animator.StringToHash("IsIdle");
         
         private void Awake()
         {
@@ -20,11 +21,15 @@ namespace Player.Animations.Script
         private void OnEnable()
         { 
             PlayerController.OnPlayerRunning += UpdateRunTrigger;
+            PlayerController.OnPlayerDancing += UpdateDanceTrigger;
+            PlayerController.OnPlayerIdle += UpdateIdleTrigger;
         }
 
         private void OnDisable()
         {
             PlayerController.OnPlayerRunning -= UpdateRunTrigger;
+            PlayerController.OnPlayerDancing -= UpdateDanceTrigger;
+            PlayerController.OnPlayerIdle -= UpdateIdleTrigger;
         }
 
         private void UpdateRunTrigger()
@@ -35,6 +40,12 @@ namespace Player.Animations.Script
         private void UpdateDanceTrigger()
         {
             _animator.SetBool(IsDancing, true);
+        }
+        
+        private void UpdateIdleTrigger()
+        {
+            _animator.SetBool(IsRunning, false);
+            _animator.SetBool(IsIdle, true);
         }
     }
 }

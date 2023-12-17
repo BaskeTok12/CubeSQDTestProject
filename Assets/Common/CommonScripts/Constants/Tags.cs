@@ -4,5 +4,6 @@
     {
         public const string PlayerTrigger = "Player";
         public const string ObstacleTrigger = "Obstacle";
+        public const string FinishTrigger = "Finish";
     }
 }
